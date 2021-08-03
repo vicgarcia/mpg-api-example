@@ -1,0 +1,13 @@
+# exclude python runtime output
+__pycache__
+*.pyc
+
+# local postgres docker files
+docker/postgres/*
+!docker/postgres/.gitinclude
+
+# .env file
+.env
+
+# misc junk
+.DS_Store

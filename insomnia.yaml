@@ -1,0 +1,357 @@
+_type: export
+__export_format: 4
+__export_date: 2021-08-03T01:57:55.126Z
+__export_source: insomnia.desktop.app:v2021.4.1
+resources:
+  - _id: req_191de8ea22164368bacc0443cce39b62
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626560825213
+    created: 1626320085597
+    url: http://localhost:8000/vehicles/
+    name: create vehicle
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"year": 2016,
+        	"make": "Ducati",
+        	"model": "Scrambler",
+        	"vin": "ML015AXG7GT000049"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_683c570cf9604e9a99f095276f01814d
+    authentication: {}
+    metaSortKey: -1626319449776
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_c170c0add7a94b97b93785887f2cf83c
+    parentId: null
+    modified: 1627953490809
+    created: 1626319441410
+    name: mpg-api-example
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_9686a78541ff4a25b77b4922fdf6f8a0
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626567058887
+    created: 1626567044376
+    url: http://localhost:8000/vehicles/
+    name: "create vehicle (error: missing fields)"
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"year": 2010,
+        	"make": "Triumph"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_683c570cf9604e9a99f095276f01814d
+    authentication: {}
+    metaSortKey: -1626319449763.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9c28ffaa6f824c279f3a44993617a704
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626566984500
+    created: 1626492684009
+    url: http://localhost:8000/vehicles/
+    name: "create vehicles (error: request type)"
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: year
+          value: "2021"
+          description: ""
+          id: pair_567d7511ab644c7f8e8aca54e1a31b9f
+        - name: make
+          value: Harley Davidson
+          description: ""
+          id: pair_eab1ac0942e448b5aafdb94afed6cea1
+        - name: model
+          value: Softtail
+          description: ""
+          id: pair_4879c99a417b4252b5a81e73e74aed77
+        - name: vin
+          value: 1HD1YDJ10MB054211
+          description: ""
+          id: pair_5e2d7742927849a8a3b7c4ab95643828
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_3bbff80cfa2a48d6a511d4b5a3ce130c
+    authentication: {}
+    metaSortKey: -1626319449751
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3f04ef50a5e14f259a8363066bd5aeea
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626471309489
+    created: 1626319449726
+    url: http://localhost:8000/vehicles/
+    name: get vehicles
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1626319449726
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_53fb09c07b494b6db95c6b1bf61a42a2
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626552208383
+    created: 1626471304184
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/
+    name: get a vehicle
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1620205320688.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6dbd20401ed045a8b6ed408e1ff804bf
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626567076929
+    created: 1626473822187
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/
+    name: put vehicle
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"year": 2010,
+        	"make": "Triumph",
+        	"model": "Speedmaster",
+        	"vin": "SMT915RN6AT415082"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7f85d81f766944ba9754bdc6cd65d7da
+    authentication: {}
+    metaSortKey: -1618676788429.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3fe0b82de73143e397519232b090b5e1
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626567085956
+    created: 1626471487186
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/
+    name: delete a vehicle
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617148256169.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d693ceb2ae2b48de9c9a43374cb3deab
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1627953602197
+    created: 1626552247302
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/fillups/
+    name: "create fillup #1"
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"date": "2021-07-16",
+        	"mileage": 7821,
+        	"gallons": 2.721
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_683c570cf9604e9a99f095276f01814d
+    authentication: {}
+    metaSortKey: -1617148256119.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a62e1a9e08a243beacdb71359f80b51a
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1627953620992
+    created: 1627953591846
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/fillups/
+    name: "create fillup #2"
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"date": "2021-07-27",
+        	"mileage": 7947,
+        	"gallons": 2.253
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_683c570cf9604e9a99f095276f01814d
+    authentication: {}
+    metaSortKey: -1613326925483.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1f01259ff8274b259f2c956563a8e984
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626552742023
+    created: 1626552718531
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/fillups/
+    name: get fillups
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1609505594847.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4171ec840c774a4eb7db8e547b438c2c
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1627953893462
+    created: 1626553567081
+    url: http://localhost:8000/vehicles/{% response 'body',
+      'req_3f04ef50a5e14f259a8363066bd5aeea', 'b64::JFswXS5pZA==::46b', 'never',
+      60 %}/fillups/{% response 'body', 'req_1f01259ff8274b259f2c956563a8e984',
+      'b64::JFswXS5pZA==::46b', 'never', 60 %}/
+    name: delete fillup
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1605684264211.9375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ca2809ccaa41175512048d39b93d12f4c9093cf2
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626319441795
+    created: 1626319441795
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1626319441795
+    _type: environment
+  - _id: jar_ca2809ccaa41175512048d39b93d12f4c9093cf2
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626319441806
+    created: 1626319441806
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_1ccc23c09ebf4878a9e987cc76ab19ea
+    parentId: wrk_c170c0add7a94b97b93785887f2cf83c
+    modified: 1626319441419
+    created: 1626319441419
+    fileName: flask-sqlalchemy-marshmallow
+    contents: ""
+    contentType: yaml
+    _type: api_spec
