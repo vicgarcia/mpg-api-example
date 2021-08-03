@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# enter psql inside the postgres-local container
+docker compose exec postgres-local psql -U user example

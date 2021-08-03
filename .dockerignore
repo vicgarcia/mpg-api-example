@@ -1,0 +1,7 @@
+
+# ignore .env files
+.env
+.env.template
+
+# ignore docker-compose file
+docker-compose.yml
