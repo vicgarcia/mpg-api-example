@@ -51,7 +51,6 @@ class VehicleView(MethodView):
             return jsonify({'error': 'an unhandled error occurred'}), 500
 
     def get(self, vehicle_id):
-
         if vehicle_id is not None:
             return self._get_single(vehicle_id)
         else:

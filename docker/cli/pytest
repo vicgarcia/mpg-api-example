@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# use the pipenv command from within a docker container from shell on host
-
-ARGS="$@"
-
-docker-compose exec flask-api-local sh -c "cd /code && poetry run pytest $ARGS"

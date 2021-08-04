@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# use the django manage.py command from within a docker container from shell on host
+# run poetry inside the flask-api container
 
 ARGS="$@"
 
